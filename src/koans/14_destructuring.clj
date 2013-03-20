@@ -39,4 +39,6 @@
 
   "All together now!"
   (= "Test Testerson, 123 Test Lane, Testerville, TX"
-     ((fn [[]]) ["Test" "Testerson"] test-address)))
+     ((fn [[a b] c] (let [{x :street-address y :city z :state} c] 
+                     (str a " " b ", " x ", " y ", " z )))
+      ["Test" "Testerson"] test-address)))
